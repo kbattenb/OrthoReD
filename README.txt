@@ -75,8 +75,8 @@ can be executed directly without the first two scripts.
 
 TEST RUN
 ====================
-Try to run Orthologfinder using the provided example dataset to check if
-Orthologfinder is running properly.
+Try to run OrthoReD using the provided example dataset to check if
+OrthoReD is running properly.
 
 1. Make a new empty directory <test>.
 
@@ -106,4 +106,55 @@ generate a file with the predicted orthologs.
   less ./INPUT_EXAMPLE/expected_output.fas
 
 OrthoReD is running properly if these two files are identical.
+====================
+
+
+
+FILE FORMAT
+====================
+Once test run is complete, OrthoReD is ready for a user defined file.
+Two files need to be prepared with specific formats.
+
+1.Input sequences
+The header of each and every sequence provided to OrthoReD has to have the
+following format:
+
+  <Species ID>_<Locus ID>_<Isoform ID>_<Some other ID>
+  *See "expected_output.fas" as an example.
+  *The first two IDs are required, the third ID is recommended but not required,
+  and the last ID is not required
+
+  <Species ID>: Short ID for each species.
+                (e.g. "Mt" for "Medicago truncatula")
+
+  <Locus ID>: Some ID to specify a given gene/locus within a genome.
+              (e.g. "Medtr7g117930")
+
+  <Isoform ID>: Indicate which isoform it is if available. Otherwise put “na”.
+
+  <Some other ID>: Put “na” unless there are some other information that the use
+                   needs to keep.
+
+2.Species list
+All species included into the database needs to be indicated in a single file
+with the following format:
+
+  <Full species name>	<Short species name>	<Species ID>
+  *See "species_list_EXAMPLE.txt" as an example.
+
+  <Full species name>: Full name of the species, genus and the specific epithet.
+                       (e.g. "Medicago truncatula")
+
+  <Short species name>: The first letter of the genus and the full specific
+                        epithet.
+                        (e.g. Athaliana)
+
+  <Species ID>: Short ID for each species.
+                (e.g. "Mt" for "Medicago truncatula")
+                *make sure this is identical to the <Species ID> used in the
+                input sequence file.
+
+Note: Once, the headers are formatted, upon running "step-01-02.pl" or
+"step-03-04.pl", make sure to turn off the automated header cleaning option
+(--q_clean NO --s_clean NO) whenever applicable.
 ====================
