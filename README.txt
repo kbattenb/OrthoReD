@@ -4,7 +4,9 @@ sequence included in the subject, OrthoReD will search through the subject to
 find predicted orthologs.
 
 Please cite:
-(UNPUBLSIHED)
+Battenberg K, Lee EK, Chiu JC, Berry AM, Potter D. 2017. OrthoReD: a rapid and
+accurate orthology prediction tool with low computational requirement. BMC
+Bioinformatics. 18:310.
 
 
 
