@@ -14,7 +14,7 @@ DEPENDENCIES
 ====================
 OrthoReD requires the following tools to be installed to run properly.
 
-NCBI BLAST (tested version is v2.4.0+)
+NCBI BLAST (tested version is v2.7.1+)
 	Available at: https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download
 AB BLAST (tested version is v3.0PE; this is optional)
 	Available at: https://www.advbiocomp.com/blast.html
@@ -22,9 +22,9 @@ SWIPE (tested version is 2.0.12)
 	Available at: https://github.com/torognes/swipe/releases
 MCL (tested version is v14-137)
 	Available at: http://micans.org/mcl/src/
-MAFFT (tested version is v7.273)
+MAFFT (tested version is v7.402)
 	Available at: http://mafft.cbrc.jp/alignment/software/
-RAxML (tested version is v8.2.4)
+RAxML (tested version is v8.2.12)
 	Available at: http://sco.h-its.org/exelixis/web/software/raxml/index.html
 	*for RAxML, make sure to keep track of the version that was installed (AVX or SSE3)
 Newick Utilities (tested version is v1.6)
@@ -50,7 +50,7 @@ testing if each tools are available in the PATH.
 
 If any of these command do not return a path, add these tools to the path.
 
-  export PATH:$PATH:/some/path/to/the/tool/
+  export PATH=$PATH:/some/path/to/the/tool/
 ====================
 
 
